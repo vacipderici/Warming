@@ -8,7 +8,7 @@ namespace Warning.Core.DataAccess
 {
     public interface IEntityRepository<T> where T:class,IEntity,new ()
     {
-        T get(Expression<Func<T, bool>> filter = null);
+        T Get(Expression<Func<T, bool>> filter = null);
 
         List<T> GetList(Expression<Func<T,bool>>filter = null);
 
