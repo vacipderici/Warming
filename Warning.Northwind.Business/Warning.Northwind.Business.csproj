@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Warning.DataAccess\Warning.Northwind.DataAccess.csproj" />
+    <ProjectReference Include="..\Warning.Northwind.Entities\Warning.Northwind.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
