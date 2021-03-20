@@ -12,6 +12,7 @@ using Warning.Northwind.Business.Abstract;
 using Warning.Northwind.Business.Concrete;
 using Warning.Northwind.DataAccess.Abstract;
 using Warning.Northwind.DataAccess.Concrete.EntityFramework;
+using Warning.Northwind.MvcWebUI.Middlewares;
 
 namespace Warning.Northwind.MvcWebUI
 {
@@ -47,12 +48,17 @@ namespace Warning.Northwind.MvcWebUI
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            //app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthorization();
 
+          
+
+            app.UseFileServer();
+            app.UseNodeModules(env.ContentRootPath);
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
