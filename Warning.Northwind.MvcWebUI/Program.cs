@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Warning.Norhwind.MvcWebUI
+namespace Warning.Northwind.MvcWebUI
 {
     public class Program
     {

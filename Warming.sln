@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warning.Core", "Warning.Core\Warning.Core.csproj", "{29C34ED7-45AB-4847-9705-6F8E065A66DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warning.Core", "Warning.Core\Warning.Core.csproj", "{29C34ED7-45AB-4847-9705-6F8E065A66DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warning.Northwind.DataAccess", "Warning.DataAccess\Warning.Northwind.DataAccess.csproj", "{DE58C454-099F-45A2-A277-9D3AE52896AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warning.Northwind.DataAccess", "Warning.DataAccess\Warning.Northwind.DataAccess.csproj", "{DE58C454-099F-45A2-A277-9D3AE52896AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warning.Northwind.Entities", "Warning.Northwind.Entities\Warning.Northwind.Entities.csproj", "{71FAF076-6BCA-4296-8EDD-37CD1DC65CF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warning.Northwind.Entities", "Warning.Northwind.Entities\Warning.Northwind.Entities.csproj", "{71FAF076-6BCA-4296-8EDD-37CD1DC65CF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warning.Northwind.Business", "Warning.Northwind.Business\Warning.Northwind.Business.csproj", "{AE3EF213-CB26-434F-AF4D-F4488AD2BCF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warning.Northwind.Business", "Warning.Northwind.Business\Warning.Northwind.Business.csproj", "{AE3EF213-CB26-434F-AF4D-F4488AD2BCF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warning.Norhwind.MvcWebUI", "Warning.Norhwind.MvcWebUI\Warning.Norhwind.MvcWebUI.csproj", "{6B1647F2-E6B4-40A5-8307-0876D405D35E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warning.Northwind.MvcWebUI", "Warning.Northwind.MvcWebUI\Warning.Northwind.MvcWebUI.csproj", "{75ABC83F-FCE0-484B-884B-EB620581FD98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{AE3EF213-CB26-434F-AF4D-F4488AD2BCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE3EF213-CB26-434F-AF4D-F4488AD2BCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE3EF213-CB26-434F-AF4D-F4488AD2BCF8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B1647F2-E6B4-40A5-8307-0876D405D35E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B1647F2-E6B4-40A5-8307-0876D405D35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B1647F2-E6B4-40A5-8307-0876D405D35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B1647F2-E6B4-40A5-8307-0876D405D35E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75ABC83F-FCE0-484B-884B-EB620581FD98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75ABC83F-FCE0-484B-884B-EB620581FD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75ABC83F-FCE0-484B-884B-EB620581FD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75ABC83F-FCE0-484B-884B-EB620581FD98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
