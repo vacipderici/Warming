@@ -22,7 +22,7 @@ namespace Warning.Northwind.Business.Concrete
 
         public void Delete(int productId)
         {
-            _productDal.Delete(productId);
+            _productDal.Delete(new Product { PRoductId = productId});
         }
 
         public List<Product> GetAll()

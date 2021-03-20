@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Warning.Northwind.Business.Abstract;
+using Warning.Northwind.Business.Concrete;
+using Warning.Northwind.DataAccess.Abstract;
+using Warning.Northwind.DataAccess.Concrete.EntityFramework;
 
 namespace Warning.Northwind.MvcWebUI
 {
@@ -23,6 +27,9 @@ namespace Warning.Northwind.MvcWebUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IProductService, ProductManager>();
+            services.AddScoped<IProductDal, EfProductDal>();
+
             services.AddControllersWithViews();
         }
 

@@ -8,4 +8,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Warning.Core\Warning.Core.csproj" />
+    <ProjectReference Include="..\Warning.Northwind.Business\Warning.Northwind.Business.csproj" />
+    <ProjectReference Include="..\Warning.Northwind.Entities\Warning.Northwind.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
