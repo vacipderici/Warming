@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Warning.Northwind.Business.Abstract;
+using Warning.Northwind.MvcWebUI.Models;
 
 namespace Warning.Northwind.MvcWebUI.Controllers
 {
@@ -16,7 +17,13 @@ namespace Warning.Northwind.MvcWebUI.Controllers
         }
         public ActionResult Index()
         {
-            return View();
+            var products = _productService.GetAll();
+            ProductListViewModel model = new ProductListViewModel
+            {
+                Products = products
+            };
+
+            return View(model);
         }
     }
 }

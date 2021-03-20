@@ -5,7 +5,8 @@ using Warning.Core.Entities;
 
 namespace Warning.Northwind.Entities.Concrete
 {
-   public class Category: IEntity
+    [Microsoft.EntityFrameworkCore.Keyless]
+    public class Category: IEntity
     {
         public int CayegoryId { get; set; }
         public string CategoryName { get; set; }
