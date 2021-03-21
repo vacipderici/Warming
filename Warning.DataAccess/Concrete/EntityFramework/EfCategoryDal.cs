@@ -7,7 +7,7 @@ using Warning.Northwind.Entities.Concrete;
 
 namespace Warning.Northwind.DataAccess.Concrete.EntityFramework
 {
-   public class EfCategoryDal:EfEntityRepositoryBase<Product,NorthwindContext>,IProductDal
+   public class EfCategoryDal:EfEntityRepositoryBase<Category,NorthwindContext>,ICategoryDal
     {
 
     }
