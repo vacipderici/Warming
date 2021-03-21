@@ -3,24 +3,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <table>
-        
-        @foreach (var product in Model.Products)
-        {
-        <tr>
-            <td>@product.ProductName</td>
-            <td>@product.UnitPrice</td>
-            <td>@product.UnitsInStock</td>
-        </tr>
-        }
-    </table>
-</body>
-</html>
+    <div>
+
+        <table class="table table-responsive">
+
+            <tr>
+                <td>Product Name</td>
+                <td>Unit Price</td>
+                <td>Units In Stock</td>
+            </tr>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.ProductName</td>
+                    <td>@product.UnitPrice</td>
+                    <td>@product.UnitsInStock</td>
+                </tr>
+            }
+        </table>
+
+
+    </div>
+
