@@ -32,6 +32,8 @@ namespace Warning.Northwind.MvcWebUI
             services.AddScoped<IProductDal, EfProductDal>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<ICategoryDal, EfCategoryDal>();
+            services.AddSession();
+            services.AddDistributedMemoryCache();
 
 
             services.AddControllersWithViews();
@@ -60,6 +62,7 @@ namespace Warning.Northwind.MvcWebUI
           
 
             app.UseFileServer();
+            app.UseSession();
             app.UseNodeModules(env.ContentRootPath);
             
             app.UseEndpoints(endpoints =>
