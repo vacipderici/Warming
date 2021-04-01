@@ -33,5 +33,11 @@ namespace Warning.Northwind.MvcWebUI.Controllers
 
             return View(model);
         }
+
+
+        public IActionResult AddToCart()
+        {
+            HttpContext.Session.
+        }
     }
 }
