@@ -10,7 +10,7 @@ namespace Warning.Northwind.MvcWebUI.Services
     {
 
         Cart GetCart();
-        void SetCart();
+        void SetCart(Cart cart);
 
     }
 }

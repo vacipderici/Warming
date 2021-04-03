@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,6 +14,7 @@ using Warning.Northwind.Business.Concrete;
 using Warning.Northwind.DataAccess.Abstract;
 using Warning.Northwind.DataAccess.Concrete.EntityFramework;
 using Warning.Northwind.MvcWebUI.Middlewares;
+using Warning.Northwind.MvcWebUI.Services;
 
 namespace Warning.Northwind.MvcWebUI
 {
@@ -32,11 +34,15 @@ namespace Warning.Northwind.MvcWebUI
             services.AddScoped<IProductDal, EfProductDal>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<ICategoryDal, EfCategoryDal>();
+            services.AddSingleton<ICartSessionService, CartSessionService>();
+            services.AddSingleton<ICartService, CartService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSession();
             services.AddDistributedMemoryCache();
 
 
             services.AddControllersWithViews();
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

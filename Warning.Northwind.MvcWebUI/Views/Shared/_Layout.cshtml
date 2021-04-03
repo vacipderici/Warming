@@ -43,6 +43,11 @@
     </div>
     <div class=" col-md-10">
         <main role="main" class="">
+            @if (TempData["message"] != null)
+            {
+            <div class="alert alert-info" role="alert">@TempData["message"]</div>
+            }
+
             @RenderBody()
         </main>
     </div>

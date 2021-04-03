@@ -10,27 +10,30 @@ namespace Warning.Northwind.MvcWebUI.Services
 {
     public class CartSessionService : ICartSessionService
     {
-        private IHttpContextAccessor _httpContextAccessor;
+       
+      
+            private IHttpContextAccessor _httpContextAccessor;
 
-        public CartSessionService(HttpContextAccessor httpContextAccessor)
-        {
-            _httpContextAccessor = httpContextAccessor;
-        }
-        public Cart GetCart()
-        {
-             Cart cartToCheck = _httpContextAccessor.HttpContext.Session.GetObject<Cart>("cart");
-            if (cartToCheck == null)
+            public CartSessionService(IHttpContextAccessor httpContextAccessor)
             {
-                _httpContextAccessor.HttpContext.Session.SetObject("cart" new Cart());
-                cartToCheck = _httpContextAccessor.HttpContext.Session.GetObject<Cart>("cart");
-
+                _httpContextAccessor = httpContextAccessor;
             }
-            return cartToCheck;
-        }
 
-        public void SetCart()
-        {
-            _httpContextAccessor.HttpContext.Session.SetObject("cart" new Cart());
+            public Cart GetCart()
+            {
+                Cart cartToCheck = _httpContextAccessor.HttpContext.Session.GetObject<Cart>("cart");
+                if (cartToCheck == null)
+                {
+                    _httpContextAccessor.HttpContext.Session.SetObject("cart", new Cart());
+                    cartToCheck = _httpContextAccessor.HttpContext.Session.GetObject<Cart>("cart");
+                }
+
+                return cartToCheck;
+            }
+
+            public void SetCart(Cart cart)
+            {
+                _httpContextAccessor.HttpContext.Session.SetObject("cart", cart);
+            }
         }
-    }
 }
